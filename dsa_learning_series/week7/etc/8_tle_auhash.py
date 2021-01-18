@@ -13,8 +13,8 @@ def f(n, s, last = 0):
     elif n!=0 and s==0:
         return 0
     t = 0
-    for i in range(1, 53):
-        if i<=s and i>last:
+    for i in range(last+1, 53):
+        if i<=s:
             t+=f(n-1, s-i, last = i)
     return t
 
